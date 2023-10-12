@@ -1,0 +1,12 @@
+.header{
+  background-color: $primary-background-color;
+
+&__logo {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 25px;
+  color: $white-color;
+  padding: 15px 0;
+ }
+
+}
