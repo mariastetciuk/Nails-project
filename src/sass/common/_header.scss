@@ -1,12 +1,45 @@
 .header{
   background-color: $primary-background-color;
 
+  &__container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+
+  &__bar{
+    margin: 0;
+    padding: 2px 0 0 0;
+    color: $white-color;
+    background-color: inherit;
+    border: none;
+
+  }
+
 &__logo {
   font-family: 'Dancing Script', cursive;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 29px;
   color: $white-color;
   padding: 15px 0;
  }
 
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__link {
+    color: $white-color;
+  }
+
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    background-color: inherit;
+  }
 }
