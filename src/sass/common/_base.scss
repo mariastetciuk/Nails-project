@@ -1,16 +1,15 @@
 body {
-    // font-family: DM Sans, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     letter-spacing: -0.04em;
-  
-    color: #111111;
+    color: $dark-color;
     // background-color: $primary-background-color;
     transition: background-color $cubic-time;
   
-    &.modal-open {
-      overflow: hidden;
-      height: 100vh;
-    }
+    // &.modal-open {
+    //   overflow: hidden;
+    //   height: 100vh;
+    // }
   }
 
   h1,

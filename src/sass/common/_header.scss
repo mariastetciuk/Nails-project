@@ -7,7 +7,7 @@
     align-items: center;
   }
 
-  &__bar{
+  &__menu{
     margin: 0;
     padding: 2px 0 0 0;
     color: $white-color;
@@ -43,3 +43,98 @@
     background-color: inherit;
   }
 }
+
+.mobile-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-100%);
+  transition: transform $cubic-time;
+  z-index: 1;
+
+ &__btn{ 
+  position: absolute;
+  top:10px;
+  right: 10px;
+  color: $text-gray-color;
+  background-color: inherit;
+  border: none;
+  transition: all $cubic-time;
+
+  &:hover,
+  &:focus {
+color: $primary-background-color;
+  }
+
+  &--icon{
+   fill: currentColor;
+    padding: 0;
+    
+    width: 20px;
+    height: 20px;
+  }
+ }
+   
+  
+
+  &__wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 20px 0;
+    background-color: rgb(244, 245, 245);
+    z-index: 2;
+  }
+}
+.is-open{
+  transform: translateX(0);
+
+}
+.nav{
+
+  &__list{
+    margin-bottom: 10px;
+  }
+  &__item {
+    padding: 15px 10px;
+    font-weight: 700;
+    font-size: 18px;
+    color: $text-gray-color;
+    text-transform: uppercase;
+    border-bottom: 1px solid $white-gray-color;
+
+  }
+}
+
+.phone,
+.location{
+  padding: 0 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid $white-gray-color;
+
+
+  &__icon{
+    width: 35px;
+    height: 35px;
+    
+    fill: $primary-background-color;
+  }
+
+  &__text{
+
+  }
+}
+.phone{
+ margin-bottom: 10px;
+}
+
