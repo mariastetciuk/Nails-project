@@ -1,43 +1,33 @@
-
-
 const mobileMenu = document.querySelector('.js-mobile-menu');
 const openMenuBtn = document.querySelector('.js-open-menu');
 const closeMenuBtn = document.querySelector('.js-close-menu');
 
-const toggleMenu = (ev) => {
+const openMenu = ()=> {
+  window.addEventListener('keydown', handleEscKeyPress);
+  mobileMenu.classList.add('is-open');
+}
 
-  const isMenuOpen =
-    openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-  openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-  mobileMenu.classList.toggle('is-open');
-  
-};
+const closeMenu = ()=> {
+  window.removeEventListener('keydown', handleEscKeyPress);
+  mobileMenu.classList.remove('is-open');
+}
 
-// window.addEventListener('keydown', handleEscKeyPress);
-window.addEventListener('click', handleBackDropClick);
-openMenuBtn.addEventListener('click', toggleMenu);
-closeMenuBtn.addEventListener('click', toggleMenu);
-mobileMenu.addEventListener('ckick', toggleMenu);
-
-
-// function handleEscKeyPress(evt) {
-//   const isEsc = evt.code === 'Escape';
-//   if (isEsc) {
-//     toggleMenu();
-//     // removeListeners();
-//     document.body.classList.remove('is-open');
-//   }
-// }
-
-function handleBackDropClick(evt) {
-  if (evt.target === mobileMenu) {
-   toggleMenu();
+const handleEscKeyPress = (evt)=> {
+  const isEsc = evt.code === 'Escape';
+  if (isEsc) {
+    closeMenu();
     document.body.classList.remove('is-open');
   }
 }
 
-// function removeListeners() {
-//   window.removeEventListener('keydown', handleEscKeyPress);
-//   window.removeEventListener('click', handleBackDropClick);
-// }
+const handleBackDropClick =(evt)=> {
+  if (evt.target === mobileMenu) {
+   closeMenu()
+    document.body.classList.remove('is-open');
+  }
+}
+
+window.addEventListener('click', handleBackDropClick);
+openMenuBtn.addEventListener('click', openMenu);
+closeMenuBtn.addEventListener('click', closeMenu);
 
