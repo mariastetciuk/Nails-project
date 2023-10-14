@@ -19,7 +19,7 @@
 &__logo {
   font-family: 'Dancing Script', cursive;
   font-weight: 700;
-  font-size: 29px;
+  font-size: 31px;
   color: $white-color;
   padding: 15px 0;
  }
@@ -104,7 +104,7 @@ color: $primary-background-color;
     margin-bottom: 10px;
   }
   &__item {
-    padding: 15px 10px;
+    padding: 15px 20px;
     font-weight: 700;
     font-size: 18px;
     color: $text-gray-color;
@@ -116,7 +116,7 @@ color: $primary-background-color;
 
 .phone,
 .location{
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 10px 20px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -135,6 +135,6 @@ color: $primary-background-color;
   }
 }
 .phone{
- margin-bottom: 10px;
+ margin-bottom: 20px;
 }
 
